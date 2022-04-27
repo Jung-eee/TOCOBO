@@ -1,22 +1,53 @@
 @charset "UTF-8";
-html,body { height: 100%; }
-/* 메인배너 */
-#mainbanner {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto 100%;
-  position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&display=swap');
+html,body { height: 100vh; }
+h1,h2,h3,h4,h5,h6 {
+  font-size: 20px;
 }
+/* 메인배너 */`1`
 #mainbanner .inner {
   height: 100vh;
   margin: 0 auto;
+  position: relative;
 }
-#mainbanner .maintitle a {
-  display: block;
+#mainbanner .inner .bn_txt{
   position: absolute;
+  top: 300px;
+  left: 120px;
+}
+
+#mainbanner .inner .bn_txt h1{
+  color: #fff;
+  font-size: 70px;
+  font-weight: 100px;
+  line-height: 75px;
+}
+
+#mainbanner .inner .bn_txt p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 60px;
+  margin-top: 20px;
+}
+
+#mainbanner .inner .bn_txt a.common_btn{
+  display: inline-block;
+  margin-top: 30px;
+  padding: 17px 68px;
+  background-color: #fff;
+  border-radius: 50px;
   text-align: center;
-  width: 100%;
-  left: 0;
+  font-size: 16px;
+  color: #009BDE;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  letter-spacing: 0;
+}
+
+#mainbanner .inner .bn_txt a.common_btn:hover {
+  background-color: red;
+  color: white;
 }
 
 .h_inner {
@@ -29,29 +60,33 @@ html,body { height: 100%; }
 
 }
 .category{
-  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 }
+
 #list {
-  float: left;
-  overflow: hidden;
   list-style: none;
   line-height: 80px;
+  margin-left: 10px;
 }
 #list li {
   float: left;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 #list li a {
   color: red;
   font-size: 18px;
-  font-weight: 700px;
+  font-weight: bold;
 }
 
 #menu {
   float: right;
   list-style: none;
   overflow: hidden;
+  margin-right: 20px;
 }
 #menu li {
   float: left;
@@ -62,12 +97,91 @@ html,body { height: 100%; }
   width: 32px;
   height: 32px;
 }
+#menu li a span {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 28px;
+  border-radius: 50%;
+  margin-left: 5px;
+  background-color: #DC272D;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+}
 #top_logo {
+  position: absolute;
   width: 194px;
-  margin: 0 auto
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #top_logo a img{
-  margin-top: 25px;
   width: 194px;
   height: 35px;
+}
+#box section#first {
+  background-color: white;
+  height: 630px;
+}
+#box section#first .inner{
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+#box section#first .inner .mini_box{
+  margin-left: 80px;
+}
+#box section#first .inner .mini_box .text-box .t_txt {
+  color: #009BDE;
+  font-size: 19px;
+  line-height: 1;
+}
+#box section#first .inner .mini_box .text-box h2 {
+  font-size: 60px;
+  color: #DC272D;
+  line-height: 66px;
+  margin: 30px auto 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#box section#first .inner .mini_box .text-box .m_txt {
+  color: black;
+  font-size: 16px;
+  line-height: 26px;
+}
+#box section#first .inner .mini_box .text-box a.common-btn1 {
+  display: inline-block;
+  margin: 30px 0 0;
+  padding: 18px 60px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient( to bottom,#FF7E7E,#DC272D );
+  color: #fff;
+  border-radius: 60px;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0;
+  z-index: 10;
+  border: 1.5px solid red;
+  transition: all 0.8s;
+}
+#box section#first .inner .mini_box .text-box a.common-btn1:hover{
+  background: #fff;
+  color: red;
+}
+#box section#first .img_box {
+  width: 600px;
+  height: 600px;
+}
+
+#box section#first .img_box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+
 }
