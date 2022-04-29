@@ -277,7 +277,8 @@ h1,h2,h3,h4,h5,h6 {
   margin-top: 90px;
   height: 755px;
 }
-#box section#third .txt_box {
+#box section#third .mini_box {
+  display: flex;
   margin-left: 80px;
 }
 #box section#third .txt_box h1 {
@@ -322,13 +323,14 @@ h1,h2,h3,h4,h5,h6 {
   justify-content: flex-end;
   align-items: center;
   top: 20px;
+  position: relative;
 }
 
 #box section#third .img_box img{
   width: 30%;
-
-
+  top: 50px;
 }
+
 #footer .f_logo  a img {
   width: 194px;
   height: 35px;
