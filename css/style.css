@@ -287,6 +287,7 @@ ul, li {
   display: flex;
   margin-left: 80px;
 }
+
 #box section#third .txt_box h1 {
   font-size: 55px;
   color: #009BDE;
@@ -363,21 +364,28 @@ ul, li {
   height: 35px;
 }
 
+#footer .l_footer {
+margin-left: 25px;
+}
+
 #footer .l_footer .info {
   color: #5B5B5B;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 25px;
   font-weight: bold;
+}
+#footer .l_footer .info a {
+  color: black;
 }
 
 #footer .l_footer .info .line-span {
   display: inline-block;
-    width: 1px;
-    height: 11px;
-    margin: 0 8px;
-    vertical-align: middle;
-    padding: 0;
-    background-color: #CECECE;
+  width: 1px;
+  height: 11px;
+  margin: 0 8px;
+  vertical-align: middle;
+  padding: 0;
+  background-color: #CECECE;
 }
 
 #footer .l_footer span.copy {
@@ -441,6 +449,8 @@ ul, li {
   transition: all 0.3s;
   font-style: normal;
   font-weight: normal;
+  font-family: 'Noto Sans KR', sans-serif;
+
 }
 
 .r_footer .cs_box h1 {
@@ -451,6 +461,7 @@ ul, li {
   font-family: 'Source Serif Pro',serif;
   font-style: italic;
   margin-bottom: 25px;
+  font-weight: bold;
 }
 
 .r_footer .cs_box p {
@@ -466,6 +477,7 @@ ul, li {
   font-size: 14px;
   color: #5B5B5B;
   line-height: 22px;
+  font-weight: bold;
 }
 
 .r_footer .cs_box a{
