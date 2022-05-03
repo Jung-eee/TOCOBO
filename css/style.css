@@ -14,32 +14,35 @@ ul, li {
   list-style: none;
 }
 /* 메인배너 */
+#mainbanner {
+  height: 100vh;
+}
 #mainbanner .inner {
   height: 100vh;
   margin: 0 auto;
   position: relative;
 }
-#mainbanner .inner .bn_txt{
+#mainbanner .inner .bn_txt1{
   position: absolute;
   top: 300px;
   left: 120px;
 }
 
-#mainbanner .inner .bn_txt h1{
+#mainbanner .inner .bn_txt1 h1{
   color: #fff;
   font-size: 70px;
   font-weight: 100px;
   line-height: 75px;
 }
 
-#mainbanner .inner .bn_txt p {
+#mainbanner .inner .bn_txt1 p {
   color: #fff;
   font-size: 20px;
   line-height: 60px;
   margin-top: 20px;
 }
 
-#mainbanner .inner .bn_txt a.common_btn{
+#mainbanner .inner .bn_txt1 a.common_btn{
   display: inline-block;
   margin-top: 30px;
   padding: 17px 68px;
@@ -53,7 +56,7 @@ ul, li {
   letter-spacing: 0;
 }
 
-#mainbanner .inner .bn_txt a.common_btn:hover {
+#mainbanner .inner .bn_txt1 a.common_btn:hover {
   background-color: red;
   color: white;
 }
@@ -75,7 +78,16 @@ ul, li {
   align-items: center;
   background: linear-gradient(0deg,rgba(255,255,255,0) ,rgba(255,255,255,1) );
 }
-
+.btn-box {
+  position: absolute;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  bottom: 50px;
+}
+.btn-box:nth-child(1){
+  right: 60px;
+}
 #list {
   list-style: none;
   line-height: 80px;
