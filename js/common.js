@@ -15,7 +15,7 @@ $(function() {
       $(this).remove()
     }
 });
-const marginNumber = 600;
+const marginNumber = 1920;
 const pwElem = $(".inner .slider")
 const pageLeng = $(".inner .slider .bn_img").length;
 $(pwElem).width(marginNumber*pageLeng); //.page의 length 값을 가져와서 .page-wrap 초기 너비 값은 설정
