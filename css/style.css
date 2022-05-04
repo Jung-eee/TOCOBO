@@ -100,21 +100,27 @@ ul, li {
   transition: all 0.5s;
   letter-spacing: 0;
 }
-
 #mainbanner .inner .bn_txt2 a.common_btn:hover {
-  display: block;
-  content: "Discover More";
+  color: #fff;
+  background: linear-gradient( to bottom,#79d5fc,#009BDE );
+}
+#mainbanner .inner .bn_txt3 a.common_btn{
+  display: inline-block;
+  margin-top: 50px;
+  padding: 17px 68px;
+  background-color: #E62E2E;
+  border-radius: 50px;
+  text-align: center;
   font-size: 16px;
   color: #fff;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  line-height: 48px;
-  transition: all 0.8s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient( to bottom,#79d5fc,#009BDE );
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  letter-spacing: 0;
+}
+#mainbanner .inner .bn_txt3 a.common_btn:hover {
+  color: #E62E2E;
+  background: #fff;
+  border: 1px solid #E62E2E !important;
 }
 
 .h_inner {
@@ -124,6 +130,7 @@ ul, li {
   position: fixed;
   top: 0;
   overflow: hidden;
+  z-index: 500;
 
 }
 .category{
@@ -394,6 +401,10 @@ ul, li {
   background: #fff;
   color:#009BDE; ;
 }
+#box section#third .txt_box {
+  width: 40%;
+  margin-left: 160px;
+}
 #box section#third .img_box{
   display: flex;
   justify-content: flex-end;
@@ -403,8 +414,15 @@ ul, li {
 }
 
 #box section#third .img_box img{
-  width: 30%;
-  top: 50px;
+  width: 50%;
+  top: 30px;
+  margin-left: 30px;
+}
+#box section#fourth {
+  width: 100%;
+  padding: 194px 0 129px;
+  background-color: #EEF8FF;
+  margin-top: -100px;
 }
 
 #footer {
