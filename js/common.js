@@ -1,44 +1,73 @@
 $(function() {
-  $("mainbanner img").click(function(){
-    let imgSrc = $(this).attr();
-    let checkAni = $("#main img:last").is(":animated");
-  })
-  $("#main img:last").animate({
-    opacity: 0
-  }, {
-    duration: 400,
-    easing: "swing",
-    start: function() {
-      $("#main img").before(`<img src=${imgSrc}>`)
-    },
-    complete: function() {
-      $(this).remove()
-    }
-});
-const marginNumber = 1920;
-const pwElem = $(".inner .slider")
-const pageLeng = $(".inner .slider .bn_img").length;
-$(pwElem).width(marginNumber*pageLeng); //.page의 length 값을 가져와서 .page-wrap 초기 너비 값은 설정
+  const widthNum = 1920; //slide li 개별 너비, ul .column 너비를 계산할 수 있다
+  const caInner = $("#carousel-inner");
+  //li의 개수 가져오기
+  let liLeng = $("ul.column li", caInner).length;
+  // let liLeng = $("ul.column li",column).length;
+  console.log(liLeng);
+  //li의 개수로 ul.column의 너비를 설정
+  $("#carousel-inner ul.column").css("width",widthNum*liLeng);
 
-function pagingBtnFunc(el) {
-    el.click(function() {
-    console.log(pageLeng);
-    let marginLeftNum = parseInt(pwElem.css("margin-left"));
-    let isAni = pwElem.is(":animated")
-    console.log(isAni);
-    if(isAni == false){ //부정어 표기 ! isAni 와 같은 의미
-      if ($(el).hasClass("next") && marginLeftNum > -(marginNumber * (pageLeng-1))) {
-        pwElem.animate({marginLeft: marginLeftNum - marginNumber},"fast");
-      }else if ( $(el).hasClass("prev") && marginLeftNum < 0) {
-        pwElem.animate({marginLeft: marginLeftNum + marginNumber},"fast");
-      }else if (marginLeftNum == -(marginNumber * (pageLeng-1)) ||  marginLeftNum == 0){
+  //슬라이드 포지션 초기화 ul.column의 마지막 li를 ul.column의 첫번째 자식요소를 이동
+  //ul.column의 초기 슬라이드 위치로 이동
+  $("#carousel-inner ul.column li:last").prependTo("#carousel-inner ul.column");
+  $("#carousel-inner").css("margin-left",-widthNum);
+
+
+  function initialFunc(init){
+    caInner.css("margin-left",widthNum);
+    if (init === "prev") {
+      $("ul.column li:last", caInner).prependTo("#carousel-inner ul.column");
+      caInner.css("margin-left",-widthNum);
+    }
+    else {
+      $("ul.column li:first", caInner).appendTo("#carousel-inner ul.column");
+      caInner.css("margin-left",-widthNum);
+    }
+  }
+
+  function actionBtn(el){
+    el.click(function(){
+
+      let caInMarginLeft = parseInt($("#carousel-inner").css("margin-left"));
+      let isAni = $("#carousel-inner").is(":animated");
+      if (el.attr("id") === "carousel-prev") {
+        if (!isAni) {
+          caInner.animate({marginLeft: caInMarginLeft + widthNum}, "slow","swing",function(){
+            // $("ul.column li:last", caInner.prependTo("#carousel-inner ul.column");
+            // caInner.css("margin-left",-widthNum);
+            initialFunc("prev")
+          })
+        }
       }
-    }
-  });
-}
-
+      else{
+        if (!isAni) {
+          caInner.animate({marginLeft: caInMarginLeft - widthNum}, "slow","swing",function(){
+            // $("ul.column li:first", caInner).appendTo("#carousel-inner ul.column");
+            // caInner.css("margin-left",-widthNum);
+            initialFunc("next")
+          })
+        }
+      }
+    })
+  }
   $(".btn").each(function(){
-    pagingBtnFunc($(this))
-  });
-  return false;
+    actionBtn($(this))
+  })
+  let timerID = null;
+  let auto = function(){
+   timerID = setInterval(function(){
+     $("#carousel-next").trigger("click");
+   },3000)
+  }
+  auto();
+  $("#carousel-prev,#carousel-next, #carousel").on({
+    mouseenter : function(){
+      clearInterval(timerID);
+    },mouseleave: function(){
+      timerID = setInterval(function(){
+        $("#carousel-next").trigger("click")
+      },3000)
+    }
+  })
 });
