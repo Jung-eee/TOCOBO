@@ -14,9 +14,12 @@ ul, li {
   list-style: none;
 }
 /* 메인배너 */
+<<<<<<< HEAD
 #mainbanner {
   height: 100vh;
 }
+=======
+>>>>>>> main
 #mainbanner .inner {
   height: 100vh;
   margin: 0 auto;
@@ -446,11 +449,33 @@ ul, li {
   margin-bottom: 60px;
 }
 
+#footer {
+  width: 100% !important;
+  margin: 150px auto 0px;
+  border: 0;
+  border-top: 1px solid #DC272D;
+  text-align: left;
+  padding: 71px 0 50px;
+  background-color: #fff;
+}
+
+#footer .footer-wrap{
+  width: 1720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer .f_logo {
+  margin-bottom: 60px;
+}
+
 #footer .f_logo  a img {
   width: 194px;
   height: 35px;
 }
 
+<<<<<<< HEAD
 #footer .l_footer {
 margin-left: 25px;
 }
@@ -475,6 +500,25 @@ margin-left: 25px;
   background-color: #CECECE;
 }
 
+=======
+#footer .l_footer .info {
+  color: #5B5B5B;
+  font-size: 11px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+#footer .l_footer .info .line-span {
+  display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 8px;
+    vertical-align: middle;
+    padding: 0;
+    background-color: #CECECE;
+}
+  
+>>>>>>> main
 #footer .l_footer span.copy {
   display: block;
   width: auto;
@@ -536,8 +580,11 @@ margin-left: 25px;
   transition: all 0.3s;
   font-style: normal;
   font-weight: normal;
+<<<<<<< HEAD
   font-family: 'Noto Sans KR', sans-serif;
 
+=======
+>>>>>>> main
 }
 
 .r_footer .cs_box h1 {
@@ -548,7 +595,10 @@ margin-left: 25px;
   font-family: 'Source Serif Pro',serif;
   font-style: italic;
   margin-bottom: 25px;
+<<<<<<< HEAD
   font-weight: bold;
+=======
+>>>>>>> main
 }
 
 .r_footer .cs_box p {
@@ -564,7 +614,10 @@ margin-left: 25px;
   font-size: 14px;
   color: #5B5B5B;
   line-height: 22px;
+<<<<<<< HEAD
   font-weight: bold;
+=======
+>>>>>>> main
 }
 
 .r_footer .cs_box a{
@@ -599,7 +652,11 @@ margin-left: 25px;
 .r_footer > .f_sns .cboth li {
   margin-right: 25px;
 }
+<<<<<<< HEAD
 .r_footer > .f_sns .cboth li a img{
+=======
+.r_footer > .f_sns .cboth li a img{ 
+>>>>>>> main
   width: 25px;
 }
 
