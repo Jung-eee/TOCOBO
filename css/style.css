@@ -14,16 +14,14 @@ ul, li {
   list-style: none;
 }
 /* 메인배너 */
-<<<<<<< HEAD
-#mainbanner {
-  height: 100vh;
-}
-=======
->>>>>>> main
 #mainbanner .inner {
   height: 100vh;
   margin: 0 auto;
+}
+
+#mainbanner .bn_img{
   position: relative;
+
 }
 
 #mainbanner .inner .slider {
@@ -51,7 +49,7 @@ ul, li {
   margin-top: 20px;
 }
 
-#mainbanner .inner .bn_txt1 a.common_btn{
+#mainbanner .inner .bn_txt1 a.common_btn1{
   display: inline-block;
   margin-top: 30px;
   padding: 17px 68px;
@@ -65,19 +63,33 @@ ul, li {
   letter-spacing: 0;
 }
 
-#mainbanner .inner .bn_txt1 a.common_btn:hover {
+#mainbanner .inner .bn_txt1 a.common_btn1:hover {
   background-color: red;
   color: white;
 }
-#mainbanner .inner .bn_txt2{
+#mainbanner .inner .bn_txt2, #mainbanner .inner .bn_txt3{
   position: absolute;
   top: 300px;
   left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainbanner .inner .bn_txt3{
+  align-items: start;
+}
+
+#mainbanner .inner .bn_txt2 {
+  top: calc(50% - 176px);
+  left: calc(50% - 325px);
 }
 
 #mainbanner .inner .bn_txt2 h1{
   color: #009BDE;
   font-size: 73px;
+  text-align: center;
   font-weight: 100px;
   line-height: 85px;
   display: block;
@@ -90,7 +102,7 @@ ul, li {
   margin-top: 20px;
 }
 
-#mainbanner .inner .bn_txt2 a.common_btn{
+#mainbanner .inner .bn_txt2 a.common_btn2{
   display: inline-block;
   margin-top: 50px;
   padding: 17px 68px;
@@ -103,10 +115,28 @@ ul, li {
   transition: all 0.5s;
   letter-spacing: 0;
 }
-#mainbanner .inner .bn_txt2 a.common_btn:hover {
+#mainbanner .inner .bn_txt2 a.common_btn2:hover {
   color: #fff;
   background: linear-gradient( to bottom,#79d5fc,#009BDE );
 }
+
+#mainbanner .inner .bn_txt3 h1{
+  color: #E62E2E;
+  font-size: 73px;
+  text-align: left;
+  font-weight: 100px;
+  line-height: 85px;
+  display: block;
+}
+
+#mainbanner .inner .bn_txt3 p {
+  color: #E62E2E;
+  font-size: 20px;
+  line-height: 60px;
+  margin-top: 20px;
+}
+
+
 #mainbanner .inner .bn_txt3 a.common_btn{
   display: inline-block;
   margin-top: 50px;
@@ -125,6 +155,7 @@ ul, li {
   background: #fff;
   border: 1px solid #E62E2E !important;
 }
+
 
 .h_inner {
   width: 100%;
