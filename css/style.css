@@ -178,13 +178,14 @@ ul, li {
 .btn-box {
   position: absolute;
   display: inline-block;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 17px;
   left: 100px;
   bottom: 50px;
 }
-.btn-box:nth-child(1){
-  right: 60px;
+
+.btn-box.next{
+  left: 200px;
 }
 #list {
   list-style: none;
@@ -548,8 +549,6 @@ margin-left: 25px;
     padding: 0;
     background-color: #CECECE;
 }
-  
->>>>>>> main
 #footer .l_footer span.copy {
   display: block;
   width: auto;
@@ -645,10 +644,7 @@ margin-left: 25px;
   font-size: 14px;
   color: #5B5B5B;
   line-height: 22px;
-<<<<<<< HEAD
   font-weight: bold;
-=======
->>>>>>> main
 }
 
 .r_footer .cs_box a{
@@ -683,11 +679,8 @@ margin-left: 25px;
 .r_footer > .f_sns .cboth li {
   margin-right: 25px;
 }
-<<<<<<< HEAD
+
 .r_footer > .f_sns .cboth li a img{
-=======
-.r_footer > .f_sns .cboth li a img{ 
->>>>>>> main
   width: 25px;
 }
 

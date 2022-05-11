@@ -2,11 +2,11 @@
 <html lang="ko" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TOCOBO</title>
   <link rel="stylesheet" href="./css/initial.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <!-- 파일 다운로드 로컬에서 적용 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <script type="text/javascript" src="./js/jquery.js"></script>
   <script type="text/javascript" src="./js/common.js"></script>
 </head>
@@ -45,10 +45,10 @@
         <span class="slider_current">1</span>/<span class="slider_total">3</span>
       </div> -->
     </div>
-    <div class="btn-box">
+    <div class="btn-box prev">
       <img src="./img/icon_main_ban_arrow_prev.png" alt="prev" class="btn prev">
     </div>
-    <div class="btn-box">
+    <div class="btn-box next">
       <img src="./img/icon_main_ban_arrow_next.png" alt="next" class="btn next">
     </div>
   </div>
@@ -165,15 +165,31 @@
       </section>
       </div>
       <!-- 4번째 section -->
-      <section id="fourth">
-            <div class="inner">
+      <section id="fourth" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="inner first swiper-slide">
               <div class="mini_box">
                 <div class="txt_box">
                   <h1>Staff’s Review</h1>
-                  <p>“ 레몬 토너로 보들보들+촉촉 피부 완성! ”</p>
+                  <p>“레몬 토너로 보들보들+촉촉 피부 완성!”</p>
+                  <p>피부 각질은 물론 블렉헤드까지 정리되는 느낌?!<br>마무리감이 각질 토너답지 않게 촉촉하게 마무리돼서 너무 좋고<br>
+                    요즘 피부 맑아졌다는 소리 많이 듣고 있어요^^ </p>
+                  <h1>Staff’s Review</h1>
+                  <p>“피부 밸런스 맞춤 유산균 에센스”</p>
+                  <p>요즘 피부 균형이 무너져 쉽게 자극받고 예민해졌었는데<br>피부 장벽 강화에 도움을 주는 유산균 에센스로 바로잡았어요!<br>
+                    다음 기초화장도 잘 먹으면서 피부가 탄력 있고 쫀쫀해졌습니다.</p>
+                  <h1>Staff’s Review</h1>
+                  <p>“다음날 팩한 듯 피부가 보들한 인생 크림!”</p>
+                  <p>처음에 셔벗 제형이 신기하면서도 피부에 겉돌까봐 걱정했는데<br>흡수력은 전혀 문제없어요! 끈적이지 않고 피부에 촵 밀착해서<br>
+                   촉촉하게 마무리되고 다음날 팩한 듯 피부가 보들보들해요</p>
+                   <h1>Staff’s Review</h1>
+                   <p>“각질 케어의 신세계, 아하 바하 레몬 토너”</p>
+                   <p>예민한 피부를 가진 저는 평소 각질 케어가 힘든데요.<br>아하,바하 성분이 고함량 들어있어 각질 케어 효과과 확실하고<br>
+                     저자극 성분이라 예민한 피부를 가진 저도 사용할 수 있어 좋아요!</p>
                 </div>
               </div>
             </div>
+          </div>
           </section>
           </div>
       <!-- footer영역 -->
@@ -264,11 +280,4 @@
       </div>
       </footer>
     </body>
-<<<<<<< HEAD
-
-    </html>
-=======
-    
-    </html>
-    
->>>>>>> main
+  </html>
