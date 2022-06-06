@@ -45,4 +45,12 @@ $(function () {
     actionBtn($(this));
   });
 
+  var mySwiper = new Swiper(".swiper-container", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    width: 637.5,
+  })
 });
